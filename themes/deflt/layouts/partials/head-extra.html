@@ -1,0 +1,35 @@
+<style>
+.title-name {
+    font-family:  'Chubbo', sans-serif;
+    font-size: 1.8rem;
+    color: #FDA6C2;
+}
+ .post-title {
+    color: #fda6c1af !important;
+  }
+
+  .post-title:hover {
+    color: #fda6c1f0 !important;
+  }
+
+        .footer-title {
+        display: inline-block;
+        position: relative;
+        color: white
+    }
+    .footer-title::before {
+        content: "";
+  position: absolute;
+  left: 49%;
+  bottom: 1%;
+  width: 105%;
+  height: 3px;
+  transform: skew(-12deg) translateX(-50%) rotate(-2deg);
+  background: #fda6c1a5;
+  z-index: -1;
+    }
+
+    .post-title:hover::before {
+        background: #fda6c1f0;
+    }
+</style>

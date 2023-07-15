@@ -1,10 +1,14 @@
----
-title: "Concurrency is not all that great"
-description: "Hugo, the world's fastest framework for building websites"
-date: "2019-02-28"
----
-
-# Randomize iterables in Python using sorted()
++++
+author = "Harsh"
+title = "Randomize iterables in Python using sorted()"
+date = "2023-05-18"
+description = "Randomize iterables in Python using sorted()"
+tags = [
+    "python",
+    "functions",
+    "sorting",
+]
++++
 
 One of the most useful built-in functions in python is the sorted() function, which takes in an iterable and returns a new list containing all the items from the iterable in ascending order.
 
@@ -20,16 +24,15 @@ The key parameter takes in a function, which gets applied to each element of the
 
 - Let's start by creating a list of some uppercase and lowercase letters
 
-```python
+```plaintext
 letters = ['a', 'D', 'c', 'B']
 ```
 
 - Now, let's call our sorted function on this list.
 
-```python
+```plaintext
 sorted(letters)
-
-> > > ['B', 'D', 'a', 'c']
+>>> ['B', 'D', 'a', 'c']
 ```
 
 We might have expected dictionary ordering (i.e. 'a' before 'B', and 'c' before 'D'), but that did not happen because the letters are sorted based on their character codes, and in lexicographical ordering, uppercase letters precede lowercase letters.

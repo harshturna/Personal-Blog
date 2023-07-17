@@ -4,9 +4,10 @@ title = "JavaScript's Execution Context"
 date = "2022-12-12"
 description = "Why do we care about the Execution Context?"
 tags = [
-    "javascript",
+    "javascript internals",
     "web",
     "web development",
+    "javascript"
 ]
 +++
 

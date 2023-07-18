@@ -145,6 +145,6 @@ We will learn about Hoisting in detail in another post.
 
 ### globalThis
 
-We now know that different javascript environments have different global objects. Browser's global object is the window, which is different from Node's global object, which might be different from other environments. <br>
+We now know that different javascript environments have different global objects. Browser's global object is the window, which is different from Node's global object, which might be different from other runtime environments. <br>
 When a program is written for multiple environments, it becomes complicated to consistently refer to the global object of an environment. <br>
 This was solved with the introduction of globalThis in ES2020. You can learn more about globalThis [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis).

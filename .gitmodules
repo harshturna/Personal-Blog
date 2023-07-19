@@ -1,3 +1,3 @@
-[submodule "themes/main"]
-	path = themes/main
+[submodule "themes/default"]
+	path = themes/default
 	url = https://github.com/grayesih/blog-theme

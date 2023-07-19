@@ -52,7 +52,7 @@ Now that we understand the happens-before relationship, let's look at our first 
 A Lamport clock is a counter, responsible for counting the number of events that occurred and incrementing the counter with each occurrence. Each node in a distributed system has its own local Lamport counter, and the counter is incremented each time an operation is executed.
 When a node communicates with another node (for example when sending a message), the sender would attach its local Lamport counter with the message, and the receiver would increment its counter when the message is received. <br>
 
-![VectorClock.jpeg](https://cdn.hashnode.com/res/hashnode/image/upload/v1669003956887/M7_Oud5mS.jpeg align="left")
+![LamportClock.jpeg](./images/LamportClock.avif)
 
 The Lamport clock guarantees that if an event _a_ happened before an event _b_, then _b_ will always have a greater Lamport timestamp than _a_. <br>
 The limitation of the Lamport clock is that the converse of this property is not true, i.e. if the timestamp of an event _a_ is lower than the timestamp of another event _b_, then it is not possible to know if _a_ actually happened before _b_ or if they are concurrent. <br>
@@ -70,7 +70,7 @@ Initially, each timestamp in the array is set to 0, and when an operation execut
 In our example, when _N1_, sends a message to _N2_, _N1_ would increment the timestamp _t<sub>N1</sub>_ by 1, and attach a copy of its array with the message. When _N2_ receives the message, it would merge its local array with the copy sent by _N1_ by taking the element-wise maximum of two arrays and then incrementing its own timestamp. <br>
 **The diagram below should aid in understanding this algorithm.**
 
-![VectorClock-final.jpeg](https://cdn.hashnode.com/res/hashnode/image/upload/v1669005394077/mejzSZB_S.jpeg align="left")
+![VectorClock-final.jpeg](./images/VectorClock.avif)
 
 With Vector clocks we can define a partial order. The rules for defining this order are - <br>
 

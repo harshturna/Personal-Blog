@@ -24,13 +24,13 @@ The key parameter takes in a function, which gets applied to each element of the
 
 - Let's start by creating a list of some uppercase and lowercase letters
 
-```plaintext
+```python
 letters = ['a', 'D', 'c', 'B']
 ```
 
 - Now, let's call our sorted function on this list.
 
-```plaintext
+```python
 sorted(letters)
 >>> ['B', 'D', 'a', 'c']
 ```
@@ -43,14 +43,14 @@ We might have expected dictionary ordering (i.e. 'a' before 'B', and 'c' before 
 
 This is where the key comes to the rescue. We can pass a function to the key which would associate a case-insensitive value to each element, and that value would be used to sort our list.
 
-```plaintext
+```python
 letters = ['a', 'D', 'c', 'B']
 sorted(letters, key=lambda letter: letter.lower())
 ```
 
 Now, when we look at our results, we get a case insensitive result because the sort was done on the lower case value of each element.
 
-```plaintext
+```python
 letters = ['a', 'D', 'c', 'B']
 sorted(letters, key=lambda letter: letter.lower())
 >>> ['a', 'B', 'c', 'D']
@@ -60,7 +60,7 @@ sorted(letters, key=lambda letter: letter.lower())
 
 We can pass in a sorted iterable to the sorted() function and use key to create a randomize list.
 
-```plaintext
+```python
 import random
 sorted_list = [1,2,3,4,5,6,7]
 sorted(sorted_list, key=lambda num: random.random())
@@ -68,7 +68,7 @@ sorted(sorted_list, key=lambda num: random.random())
 
 let's look at the output,
 
-```plaintext
+```python
 import random
 sorted_list = [1,2,3,4,5,6,7]
 sorted(sorted_list, key=lambda num: random.random())

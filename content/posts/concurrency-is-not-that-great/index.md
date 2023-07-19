@@ -11,9 +11,9 @@ One of the biggest limitations of concurrency is defined theoretically by [Amdah
 
 > Maximum speedup refers to the maximum improvement in the performance of a system that can be achieved by parallelizing a portion of it.
 
-If my argument above is confusing or doesn't sound too convincing, let's look at the following graph.
+If my argument above is confusing or doesn't sound too convincing, let's look at the following graph
 
-[![Amdahl's law - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/AmdahlsLaw.svg/1200px-AmdahlsLaw.svg.png align="left")](https://en.wikipedia.org/wiki/Amdahl%27s_law)
+![Amdahls Law Wikipedia](images/AmdahlsLaw.png)
 
 The y-axis represents the speedup, and the x-axis represents the number of processors. In this system, we assume that we have some percent of serial processes while the rest of the processes are parallel (the percent of the parallel portion is shown in the legend). When the percent of parallel processes is 95%, we observe that the speedup increases with the increase in the number of processors until a certain point, after which it flattens (We can calculate this point using Amdahl's law). With 90% of parallel processes, the graph flattens much sooner. In other words, with only a 5% increase in the serial processes, the maximum speedup is reduced by 50%, and with 75% of parallel processes, the maximum speedup is almost as good as running all processes serially. This goes to show that while concurrency sounds attractive, the speedup you gain from it is, in most cases, only slightly better than true serial processes, and even a small amount of additional serial code can make the gains from concurrency minimal. Thus, even if you can parallelize the majority of your code, you may not see significant performance gains if there are small portions of the code that must be executed serially.
 

@@ -35,21 +35,22 @@ When a javascript file starts running, a base execution context is created. The 
 When the Global execution context is created, we get access to a few things; **the Global Object **and **'this'**. Let's look at the Global Object and 'this' in practice.<br>
 
 - **Create a boilerplate HTML file and an empty javascript file and link them.**
-  ![e-demo-html.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666564231687/jW3x7Lnrs.png align="left")
+  ![e-demo-html.png](./images/1.avif)
 
   > Link the HTML file to an empty javascript file (as done on line 13)
 
 - **Open the HTML file in a browser and open up the console in the dev tools.**
 
-  ![Screen Shot 2022-10-23 at 5.37.28 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666564666853/aL4BAQl_3.png align="left")
+  ![demo.png](./images/2.avif)
 
 - **Type window in the console**
 
-  ![Screen Shot 2022-10-23 at 5.41.16 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666564895314/Cfeovi_x3.png align="left")
+  ![demo.png](./images/3.avif)
+
   **window** is the browser's global object which gets created anytime a javascript file runs (Node and other javascript runtime environments have different Global Objects).
 
 - **Let's now look at the keyword 'this'. Type this in the console**
-  ![Screen Shot 2022-10-23 at 5.44.48 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666565104238/eLPe6Zh0y.png align="left")
+  ![demo.png](./images/4.avif)
   Notice, **'this'** is the same as the browser's Global Object - window, i.e. 'this' is a reference to the window object. <br>
   So, anytime the Global execution context is created, a global object (window, in the case of the browser) is created, and its reference is passed to 'this'.
   > You can look at the Node's global object by opening a Node REPL and typing 'this'
@@ -75,24 +76,24 @@ Before looking at how things change in the execution context when we write some 
 
 Let's finally write some code in our javascript file and understand the creation and execution phases.
 
-![e-demo-js1.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666565900818/8YN230SEW.png align="left")
+![e-demo-js1.png](./images/5.avif)
 
 > Variable int is declared with var intentionally. We will look at ES6's let and const later.
 
 Let's save and run our file, and see what we get in the console.
 
-![Screen Shot 2022-10-23 at 6.00.11 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666566032302/TNRuWEMXI.png align="left")
+![demo.png](./images/6.avif)
 
-**We get the expected output - **
+**We get the expected output -**
 
 1. The value of variable int is printed to the console.
 2. The log statement inside the loggerFunction is printed to the console.
 
 Now, let's change our code a bit.
 
-![e-demo-js2.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666566306922/srElV9nlP.png align="left")
+![e-demo-js2.png](./images/7.avif)
 
-**We made the following changes - **
+**We made the following changes -**
 
 1. We are logging the variable int to the console before it is declared and initialized.
 2. We are invoking the loggerFunction before it is declared.
@@ -115,7 +116,7 @@ In the **execution phase**, the code is executed line by line. In this phase, va
 
 Let's run our code and look at the output in the console:
 
-![Screen Shot 2022-10-23 at 6.09.54 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666566609212/8xltSYwW4.png align="left")
+![demo.png](./images/8.avif)
 
 **Let's understand what happened here -**
 
@@ -132,11 +133,11 @@ Let's run our code and look at the output in the console:
 
 Let's declare our variable int with let and see the output.
 
-![e-demo-js3.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666566995903/oUAeLGpEZ.png align="left")
+![e-demo-js3.png](./images/9.avif)
 
 When we run the code we get the error:
 
-![Screen Shot 2022-10-23 at 6.17.11 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666567053999/0AWFr2joS.png align="left")
+![demo.png](./images/10.avif)
 
 As mentioned above, this is because let and const are not hoisted.
 We will learn about Hoisting in detail in another post.

@@ -59,7 +59,7 @@ As a rule of thumb, use `.lower()` when displaying the lowercase version of a 
 
 ### `.casefold()` is not perfect
 
-The `.casefold()` method we looked at will work in most cases however when we start dealing with more complex strings this method will start producing issues. Here's an example of such a case,
+The `.casefold()` method we looked at will work in most cases however when we start dealing with more complex strings, this method will start producing issues. Here's an example of such a case,
 
 ```python
 string1 = "ŝ"

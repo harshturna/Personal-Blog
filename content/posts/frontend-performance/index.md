@@ -1,7 +1,7 @@
 +++
 author = "Harsh"
 title = "Front-End Performance: The Crucible of User Experience and Technical Robustness"
-date = "2023-07-20"
+date = "2022-11-10"
 description = " The Significance of Front-End Performance"
 tags = [
     "web development",

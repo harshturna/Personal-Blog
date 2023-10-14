@@ -2,7 +2,7 @@
 author = "Harsh"
 title = "Leader Election in Distributed Systems"
 date = "2023-07-20"
-description = "Why do we care about the Execution Context?"
+description = " The Intricacies of Orchestrating a Decentralized Command Structure"
 tags = [
     "distributed systems",
     "leader election",

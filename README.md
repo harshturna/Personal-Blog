@@ -1,2 +1,3 @@
 # Personal-Blog
-[blog.harshturna.com](https://blog.harshturna.com)
+<a href="https://blog.harshturna.com" target="_blank">blog.harshturna.com</a>
+
